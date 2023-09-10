@@ -9,9 +9,11 @@ public class SpringBoot {
         annotationConfigApplicationContext.register(c);
         annotationConfigApplicationContext.refresh();
 
+        // 创建web容器并启动
         WebServer webServer = getWebServer(annotationConfigApplicationContext);
-
         webServer.start();
+
+//        DeferredImportSelector bean = annotationConfigApplicationContext.getBean(DeferredImportSelector.class);
     }
 
     private static WebServer getWebServer(AnnotationConfigApplicationContext annotationConfigApplicationContext) {

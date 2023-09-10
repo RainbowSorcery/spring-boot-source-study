@@ -11,6 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="sprIng-boot-source-study" target="13" />
       <module name="untitled" target="19" />
     </bytecodeTargetLevel>
   </component>

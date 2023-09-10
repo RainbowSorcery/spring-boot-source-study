@@ -6,14 +6,14 @@ import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class WenServerAutoConfiguration {
+public class WenServerAutoConfiguration implements AutoConfigSPI {
     @Bean
     @ConditionalOnClass(value = "org.apache.catalina.startup.Tomcat")
     public WebServer tomcatServer() {
         return new TomcatServer();
     }
 
-//    @Bean
+    @Bean
     public WebServer jettyServer() {
         return new JettyServer();
     }

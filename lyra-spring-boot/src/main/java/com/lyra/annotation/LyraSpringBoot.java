@@ -1,5 +1,6 @@
 package com.lyra.annotation;
 
+import com.lyra.spring.boot.SelectImport;
 import com.lyra.spring.boot.WenServerAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Configuration
 @ComponentScan
-@Import(value = {WenServerAutoConfiguration.class})
+@Import(value = {SelectImport.class})
 public @interface LyraSpringBoot {
 }
